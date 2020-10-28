@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO WEBSITE</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav class="navbar" id="nav">
+        <div class="sec1">
+            <div class="navfirst">
+                <div class="ham">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="img/logo1.png" alt="Logo" class="navbarLogo">
+                <h3 class="logoText">Samarth</h3>
+            </div>
+            <div class="invisible"></div>
+        </div>
+        <div class="sec2">
+            <ul class="media1093">
+                <div class="cla">
+                    <li class="item" id="a1"><a class="aitem" href="#">About</a></li>
+                </div>
+                <div>
+                    <li class="item" id="a1"><a class="aitem" href="#services">Services</a></li>
+                </div>
+                <div>
+                    <li class="item"><a class="aitem" href="#projects">Projects</a></li>
+                </div>
+                <div>
+                    <li class="item"><a class="aitem" href="#contact">Hire Me</a></li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <section class="mid" id="midsec">
+        <div class="firstsec">
+            <div class="heading">
+                <h1 class="fsechead">Hey There!</h1>
+                <h3 class="name">I'm Samarth, <span class="typing">A Passionate Web Dev.</span></h3>
+                <h5>I am a self-taught web developer who love making beautiful websites</h5>
+            </div>
+        </div>
+        <div class="secondsec">
+            <img src="img/logo3.png" alt="">
+        </div>
+    </section>
+    <section class="services" id="services">
+        <h1>Skills I Offer</h1>
+        <div class="servicesec">
+            <div class="cards" id="c1">
+                <img src="img/code.jpg" alt="">
+                <div class="contentBox">
+                    <h3 class="cardHead">HTML</h3>
+                    <p class="para">Front-end web development is the practice of converting data to a graphical interface, through the use of HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+            <div class="cards" id="c2">
+                <img src="img/design.jpg" alt="">
+                <div class="contentBox">
+                    <h3 class="cardHead">CSS</h3>
+                    <p class="para">CSS is the language we use to style an HTML document. CSS describes how HTML elements should be displayed.</p>
+                </div>
+            </div>
+            <div class="cards" id="c3">
+                <img src="img/backend.jpg" alt="">
+                <div class="contentBox">
+                    <h3 class="cardHead">Responsive Websites</h3>
+                    <p class="para">Back-end Development refers to the server-side development. Backend developer focuses on databases, scripting, and the architecture of websites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <h1>My Projects</h1>
+        <div class="info">
+            <h3>No Data</h3>
+            <img src="img/nodata.png" alt="No Data">
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="cfirst" id="contactfirstsec">
+            <img src="img/contact.png" alt="">
+        </div>
+        <div class="csecond">
+            <div>
+                <h1><span class='big'>H</span>IRE <span class='big'>M</span>E .</h1>
+                <form class="details" id="contactForm">
+                    <div class="input" id="inp"><i class="fa fa-user"></i><input id="nameInput" name="name" type="text" class="inputbox" placeholder="Enter Your Name">
+                    </div>
+                    <span id="nameWarn" style="visibility:hidden">Type Atlest 3 Characters</span>
+                    <div class="input" id="emailInp"><i class="fa fa-envelope-o"></i><input name="email" type="email" class="inputbox" id="emailInput" placeholder="Enter Your E-Mail Address">
+                    </div>
+                    <div class="input"><textarea name="expectations" id="expextations" placeholder="What Do You Expect From Me (optional)" cols="30" rows="10" class="inputbox textArea"></textarea>
+                    </div>
+                    <div class="btn"><button type="submit" id="btn">Submit Details</button></div>
+                </form>
+            </div>
+            <div class="alert" id="msg">Your Details Has Successfully Been Submitted.</div>
+        </div>
+    </section>
+    <footer>Samarth © www.portfoliowebsite.com </footer>
+</body>
+<script src="https://kit.fontawesome.com/2c1d1401c0.js" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</html>

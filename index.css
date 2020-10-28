@@ -1,0 +1,654 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Do+Hyeon&family=Red+Rose&family=Roboto+Condensed&family=Yanone+Kaffeesatz:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@1&family=Oswald:wght@300&family=Roboto+Slab:wght@900&family=Source+Sans+Pro&display=swap');@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Sora&display=swap');@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+.navbar{
+    z-index: 1;
+    display: flex;
+    height: 5rem;
+    transition: all 1s ease;
+    position: sticky;
+    top: 0; /* required for position:sticky to work */
+}
+.invisible{
+    display: none;
+}
+.ham{
+    transition: .5s;
+    height: 30px;
+    width: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    display: none;
+}
+.line{
+    height: 2px;
+    width: 15px;
+    background-color: black;
+    margin: 4px auto;
+    cursor: pointer;
+}
+.logoText{
+    margin-left: 3rem;
+    font-size: 32px;
+    font-family: 'Acme', sans-serif;
+}
+.aitem{
+    transition: all 500ms ease;
+}
+.item{
+    list-style: none;
+    margin: 0 1.5rem;
+    transition: all 500ms ease;
+    margin-top: 18px;
+    position: relative;
+}
+.item a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: 'Do Hyeon', sans-serif;
+    color: black;
+    border-radius: 10px;
+    padding: 3px;
+    margin-top: 5rem;
+}
+.item:hover a{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+}
+li:hover{
+    transform: scale(1.2);
+}
+.sec1{
+    display: flex;
+    margin: 10px 2rem 10px 10px;
+    width: 20%;
+    align-items: center;
+}
+.sec2{
+    display: flex;
+    margin: 10px 2rem 10px 10px;
+    width: 80%;
+    flex-direction: row-reverse;
+}
+.navbarLogo {
+    height: 4em;
+}
+ul{
+    display: flex;
+}
+.liItem{
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(211,211,211);
+
+}
+.itemBox{
+    margin-top: 5px;
+    overflow: hidden;
+    transition: all 500ms ease;
+    max-height: 0px;
+    position: absolute;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 15px;
+    left: -21px;
+    top: 22px;
+    box-shadow: 5px 5px 3px grey;
+    opacity: 0; /*important if i dont want border-top to show up even when max-height is 0 else i can ignore it if i dont want to give it a border*/
+}
+.items{
+    list-style: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Red Rose', cursive;
+    cursor: pointer;
+    display: block;
+    margin: 3px 0;
+    padding: 0 8px;
+}
+#a1:hover > #box{
+    max-height: 120px;
+    opacity: 1; /*important if i dont want border-top to show up even when max-height is 0*/
+}
+.mid{
+    display: flex;
+    height: 543px;
+}
+.firstsec{  
+    transition: all 250ms ease;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+.secondsec{
+    transition: all 250ms ease;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.secondsec img{
+    height: 387px;
+}
+.heading{
+    width: 500px;
+    text-align: center;
+    margin: 150px auto;
+}
+.heading h1{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 6rem;
+}
+.heading h3{
+    font-family: 'Acme', sans-serif;
+    font-size: 2.1rem;
+}
+.heading h5{
+    margin-top: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.6rem;
+}
+.cardHead{
+    font-family: 'Acme', sans-serif;
+    font-size: 31px;
+}
+.typing{
+    color: darkred;
+}
+
+.services{
+    height: 522px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+.services h1{
+    font-family: 'Chau Philomene One', sans-serif;
+    font-size: 3rem;
+    color: #801212;
+}
+.servicesec{
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#c1{
+    width: 0;
+}
+#c2{
+    height: 0;
+}
+#c3{
+    width: 0;
+}
+/* ------------------------------------------------------------------ */
+/* Making other cards blurred when hovered one using JavaScript */
+.blurred{
+    transform: scale(0.8);
+    opacity: 0.3;
+}
+.hovered{
+    transform: scale(1.1);
+    opacity: 1;
+    background: url(img/bg2.png) no-repeat center center/cover;
+    box-shadow: 5px 5px 10px gray;
+}
+/* ----------------------------------------------------------------- */
+.cards{
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
+    width: 29%;
+    height: 400px;
+    transition: transform 500ms ease, opacity 500ms ease, box-shadow 500ms ease, width 1s ease, height 1s ease;
+    position: relative;
+}
+.cards img{
+    transition: all 500ms ease;
+    transform: scale(1.1);
+    top: -222px;
+    height: 591px;
+    position: relative;
+}
+.contentBox{
+    transition: all 500ms ease;
+    padding-top: 10px;
+    background: linear-gradient(to right, #ada996, #f2f2f2, #dbdbdb, #eaeaea);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    top: -269px;
+    position: relative;
+}
+.cards:hover .contentBox{
+    top: -436px;
+}
+.cards:hover .img{
+    filter: blur(0.9);
+    transform: scale(1);
+}
+.cardHead{
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px;
+}
+.para{
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    font-size: 1.2em;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 5px;
+}
+.bgcolor{
+    background-color: white;
+    box-shadow: 0 2px 10px gray;
+}
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.projects h1{
+    font-family: 'Chau Philomene One', sans-serif;
+    font-size: 3rem;
+    color: #801212;
+    margin: 8px 0px;
+}
+.projects h4{
+    font-family: 'Chau Philomene One', sans-serif;
+    font-size: 1.2rem;
+    color: #517c11;
+    margin: 8px 0px;
+}
+.info img{
+    transition: all 250ms ease ;
+    height: 322px;
+    width: 322px;
+    background-color: white;
+}
+.info img:hover{
+    opacity: 0;
+}
+.info h3{
+    font-family: cursive;
+    text-align: center;
+    position: relative;
+    top: 140px;
+    z-index: -1;
+}
+.contact{
+    overflow: hidden;
+    display: flex;
+    background-color: #f7f7f7;
+}
+.cfirst{
+    display: flex;
+    width: 46%;
+    transform: translateX(-600px);
+    transition: all 750ms ease;
+}
+.cfirst img{
+    filter: drop-shadow(1px 2px 3px black);
+    height: 365px;
+}
+@media only screen and (max-width: 1093px) and (min-width: 850px){
+    .cfirst img{
+        height: 286px;
+    }
+    .item{
+        margin: 0;
+    }
+    .item a{
+        padding: 0 12px;
+    }
+    .media1093{
+        margin-top: 17px;
+    }
+    .cards:hover .contentBox {
+        top: -471px;
+    }
+    .sec1{
+        width: 20%;
+    }
+    .sec2{
+        width: 80%;
+        flex-direction: row-reverse;
+    }
+    .secondsec img{
+        height: 290px;
+    }
+}
+@media only screen and (max-width: 849px) and (min-width: 729px){
+    .secondsec img{
+        height: 290px;
+    }
+    .secondsec{
+        margin-top: -103px;
+    }
+    .heading h1{
+        font-size: 3rem;
+    }
+    .name{
+        font-size: 1.5rem;
+    }
+    .heading{
+        margin: 138px auto;
+    }
+    .cardHead{
+        font-size: 17px;
+    }
+    .contentBox{
+        top: -247px;
+    }
+    .sec1{
+        width: 20%;
+    }
+    .sec2{
+        width: 80%;
+        margin: 10px 0px 10px 10px;
+    }
+    ul{
+        align-items: center;
+    }
+    .item{
+        margin: 0;
+    }
+    .item a{
+        padding: 0 3px;
+        font-size: 20px;
+        margin: 0 11px;
+    }
+    .cfirst{
+        align-items: center;
+    }
+    .cfirst img{
+        height: 232px;
+    }
+    
+}
+.csecond{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 54%;
+    transition: all 750ms ease;
+    transform: translateX(450px);
+}
+.csecond h1{
+    color: #801212;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3.5rem;
+    margin: 8px 0 10px 15px;
+}
+.big{
+    font-size: 5rem;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.input{
+    background-color: #efedf0;
+    width: 373px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+.shake{
+    animation: shake 150ms linear 1 alternate;
+}
+@keyframes shake {
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(8px);
+    }
+    50%{
+        transform: translateX(-8px);
+    }
+    75%{
+        transform: translateX(8px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+.inputbox{
+    outline: none;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    margin-left: 9px;
+    font-family: 'Roboto Slab', serif;
+    width: 330px;
+}
+#nameWarn{
+    visibility: visible;
+    position: absolute;
+    top: 154px;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+.inputbox::placeholder{
+    color: #6e6e6e;
+}
+.textArea{
+    min-width: 359px;
+    max-height: 107px;
+    max-width: 359px;
+    min-height: 107px;
+    margin: 0px;
+    width: 374px;
+    height: 176px;
+}
+.fa{
+    font-size: 1.2rem;
+}
+.btn{
+    text-align: center;
+}
+.btn button{
+    outline: none;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #000;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    border: none;
+    padding: 3px 5px ;
+    cursor: pointer;
+}
+.alert{
+    font-weight: bolder;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-family: cursive;
+    background-color: #e8fcd9;
+    margin-top: 30px;
+    padding: 5px;
+    transform: scale(0);
+    transition: all 500ms ease;
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    background-color: #b6b8c4;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    font-family: 'sora', cursive;
+    padding: 2px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+@media only screen and (max-width:728px){
+    .secondsec{
+        width: 100%;
+    }
+    .secondsec img{
+        height: 280px;
+    }
+    .firstsec{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .mid{
+        flex-direction: column-reverse;
+        height: 509px;
+    }
+    .heading{
+        margin: 21px auto;
+    }
+    .heading h3{
+        font-size: 2rem;
+    }
+    .heading h1{
+        font-size: 3rem;
+    }
+    .cfirst{
+        display: none;
+    }
+    .csecond{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .services{
+        justify-content: start;
+        height: 1360px;
+    }
+    .servicesec{
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .cards{
+        height: 397px;
+        width: 84%;
+    }    
+    #c1{
+        width: 84%;
+    }
+    #c2{
+        height: 397px;
+    }
+    #c3{
+        width: 84%;
+    }
+    .csecond h1{
+        font-size: 2.5rem;
+    }
+    .input{
+        width: 313px;
+    }
+    .input input {
+        width: 267px;
+    }
+    .details{
+        margin: 0;
+    }
+    footer{
+        font-size: 14px;
+    }
+    .alert{
+        font-size: 15px;
+    }
+    .navbar{
+        overflow: hidden;
+        flex-direction: column;
+    }
+    .sec1{
+        margin: 10px 0px;
+        justify-content: space-between;
+    }
+    .sec1, .sec2{
+        width: 100%;
+    }
+    .sec2{
+        margin: 0;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .item{
+        margin: 0px 0.5rem;
+    }
+    .item a{
+        font-size: 18px;
+    }
+    .ham{
+        display: block;
+        margin-left: 10px;
+    }
+    .logoText{
+        margin-left: 1rem;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+    }
+    .navfirst{
+        display: flex;
+        align-items: center;
+    }
+    .invisible{
+        display: block;
+        visibility: hidden;
+    }
+
+    /* For sub-items of About option in Navigation Bar */
+    .liItem{
+        flex-direction: row;
+        align-items: start;
+        background-color: white;
+        
+    }
+    .items{
+        padding: 1px 2px;
+        margin: 3px 8px;
+    }
+    .itemBox{
+        border-radius: 0;
+        left: -9px;
+        border: none;
+        width: 285px;
+        box-shadow: none;
+        opacity: 1;
+    }
+    
+    .items:hover{
+        transform: scale(1);
+        color: white;
+        background-color: black;
+        border-radius: 10px;
+    }
+    a1:hover>#box{
+        max-height: 27px;
+    }
+}
